@@ -41,8 +41,7 @@ public class Grayscale extends Converter {
                 // Calculate the average of the three colors to get the gray value
                 int avg = (r + g + b) / 3;
 
-                // Now we "pack" them back into a single 32-bit integer.
-                // We keep the alpha exactly the same so the transparency doesn't break.
+                // Now we put them back into a single 32-bit integer.
                 int grayPixel = (a << 24) | (avg << 16) | (avg << 8) | avg;
 
                 // Write the new grayscale pixel to our result image
