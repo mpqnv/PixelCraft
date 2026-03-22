@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.pixelcraft;
-
+import java.awt.image.BufferedImage;
+import java.awt.Color; 
 /**
  * Applies a warm sepia tone effect to the image, giving it an aged,
  * brownish appearance similar to old photographs.
@@ -19,8 +20,6 @@ package com.mycompany.pixelcraft;
  * Implementation strategy: iterative (nested for loops over every pixel).
  * @author Alper Diker
  */
-import java.awt.image.BufferedImage;
-import java.awt.Color; 
 public class Sepia extends Converter {
     /**
      * Applies a sepia tone filter to the given image.

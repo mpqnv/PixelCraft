@@ -11,4 +11,27 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>com.mycompany.pixelcraft.Pixelcraft</exec.mainClass>
     </properties>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+                <mainClass>com.mycompany.pixelcraft.Pixelcraft</mainClass>
+                <arguments>
+                    <argument>Blur</argument>
+                    <argument>toronto.png</argument>
+                </arguments>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
 </project>
