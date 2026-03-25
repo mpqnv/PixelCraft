@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <exec.mainClass>com.mycompany.pixelcraft.PixelCraft</exec.mainClass>
+        <exec.mainClass>com.mycompany.pixelcraft.Pixelcraft</exec.mainClass>
     </properties>
 <build>
     <plugins>
@@ -18,9 +18,9 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>3.1.0</version>
             <configuration>
-                <mainClass>com.mycompany.pixelcraft.PixelCraft</mainClass>
+                <mainClass>com.mycompany.pixelcraft.Pixelcraft</mainClass>
                 <arguments>
-                    <argument>Invert</argument>
+                    <argument>Blur</argument>
                     <argument>toronto.png</argument>
                 </arguments>
             </configuration>

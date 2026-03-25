@@ -31,13 +31,15 @@ public class Invert extends RecursiveConverter {
      */
     @Override
     protected int transformPixel(int pixel) {
-        // Unpack each channel by shifting and masking to isolate 8-bit values
-        int a = (pixel >> 24) & 255;
-        int r = (pixel >> 16) & 255;
-        int g = (pixel >> 8) & 255;
-        int b =  pixel & 255;
-        // Invert each RGB channel and repack into a single ARGB int
-        // Alpha is preserved; each colour channel is replaced by its complement
-        return (a << 24) | ((255 - r) << 16) | ((255 - g) << 8) | (255 - b);
+    //Create a new ARGB object
+    ARGB p = new ARGB(pixel);
+    
+    //Return the final value
+    return new ARGB(
+        p.alpha,
+        255 - p.red,
+        255 - p.green,
+        255 - p.blue
+    ).toInt();
     }
 }

@@ -6,7 +6,7 @@ package com.mycompany.pixelcraft;
  import java.io.IOException;
  import java.lang.reflect.InvocationTargetException;
 
- public class PixelCraft {
+ public class Pixelcraft {
      /**
       * Append converter name to the input filename, before the file extension.
       * For example, if the input filename is "image.png" and the converter name is "GrayScale",
@@ -29,7 +29,7 @@ package com.mycompany.pixelcraft;
              // Create an object of the class named 'converterName'
              // Read this link for more info about Java Reflection: https://www.oracle.com/technical-resources/articles/java/javareflection.html
              // Java reflection is NOT required knowledge for this course. 
-             Class<?> clazz = Class.forName(converterName);
+             Class<?> clazz = Class.forName("com.mycompany.pixelcraft." + converterName);
              Converter converter = (Converter) clazz.getDeclaredConstructor().newInstance();
              // The class named 'converterName' must be a subclass of 'Converter'
              // Call the convert method
